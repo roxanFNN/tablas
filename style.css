@@ -1,0 +1,87 @@
+/* --- Estilos generales --- */
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* --- Contenedor de la tabla (Efecto Tarjeta Elevada) --- */
+table {
+    width: 90%;
+    max-width: 750px;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #eaeaea;
+}
+
+/* --- Celdas generales --- */
+td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+/* --- Fila final sin borde inferior --- */
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* --- Columna de Países (Pastel cálido y elegante) --- */
+td[rowspan] {
+    background-color: #fce7f3; /* Rosa pastel suave / lavanda */
+    color: #831843;            /* Tono oscuro elegante para el texto */
+    font-weight: 600;
+    text-align: center;
+    border-right: 2px solid #ffffff;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+/* Opcional: Variaciones sutiles de colores pasteles por país (puedes dejarlo uniforme o usar esto) */
+/* Si prefieres un solo color pastel unificado para todos los países, puedes borrar esta sección, pero le da un toque muy pro: */
+tr:nth-child(3) td[rowspan] { background-color: #e0f2fe; color: #0369a1; /* Azul pastel para Alemania */ }
+tr:nth-child(5) td[rowspan] { background-color: #fef3c7; color: #b45309; /* Amarillo pastel para Venezuela */ }
+tr:nth-child(7) td[rowspan] { background-color: #d1fae5; color: #065f46; /* Verde pastel para Colombia */ }
+tr:nth-child(9) td[rowspan] { background-color: #f3e8ff; color: #6b21a8; /* Morado pastel para Japón */ }
+
+/* --- Nombre del periódico --- */
+td:nth-child(2) {
+    font-weight: 500;
+    color: #475569;
+}
+
+/* --- Efecto hover suave al pasar el cursor por las filas de datos --- */
+tr:hover td:not([rowspan]) {
+    background-color: #f8fafc;
+}
+
+/* --- Enlaces estilizados con efecto botón/pastilla --- */
+td a {
+    display: inline-block;
+    color: #0284c7;
+    background-color: #f0f9ff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13px;
+    border: 1px solid #bae6fd;
+    transition: all 0.25s ease;
+}
+
+td a:hover {
+    background-color: #0284c7;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+    transform: translateY(-1px);
+}
